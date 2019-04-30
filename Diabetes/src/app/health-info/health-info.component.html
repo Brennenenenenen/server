@@ -1,0 +1,202 @@
+<div>
+<a class ="ininput"><input type="button" class="btn btn-default" value="<" onclick="history.go(-1)"></a>
+  <h2 class="header">Drugs</h2>
+
+
+
+  <!-- <form>
+    <button style="float: left; margin-left: 2%; font-size: 1.4vw" type="button" (click)="filterMeds()" class="btn btn-default">Update</button>
+    <button style="float: left; margin-left: 2%; font-size: 1.4vw" type="button" (click)="fetchMeds()" class="btn btn-default">Clear</button>
+    <button type="submit" (click)="SearchMeds()" class="searchbtn btn btn-info">Search</button>
+    <input class="searchbar" type="text" placeholder="Search.." [(ngModel)]="term" name="search">
+  </form> -->
+</div>
+
+<br><br><br>
+
+<h4 style="color: black">Price</h4>
+<div class="styled-select blue semi-square" style="width:200px;">
+      <select required [(ngModel)]="price">
+        <option value="void">Select a Price</option>
+        <option value="100">Under $100</option>
+        <option value="300">Under $300</option>
+        <option value="500">Under $500</option>
+        <option value="1000">Under $1000</option>
+        <option value="1000">$1000 & Above</option>
+      </select> 
+</div>
+
+
+<br><br>
+
+<h4 style="color: black">Class</h4>
+<div class="styled-select blue semi-square" style="width:200px;">
+  <select required [(ngModel)]="cls">
+    <option value="void">Select a Class</option>
+    <option value="alpha-glucosidase inhibitor">Alpha-Glucosidase Inhibitor</option>
+    <option value="biguanide">Biguanides</option>
+    <option value="bile acid sequestrant">Bile Acid Sequestrants</option>
+    <option value="dopamine agonist">Dopamine-2 Agonists</option>
+    <option value="DPP-4 inhibitor">DPP-IV Inhibitor</option>
+    <option value="meglitinide">Meglitinides</option>
+    <option value="sulfonylurea">Sulfonylureas</option>
+    <option value="SGLT-inhibitors">SGLT-Inhibitors</option>
+    <option value="thiazolidinediones">Thiazolidinediones</option>
+    <option value="amylin analog">Amylin Analog</option>
+    <option value="insulin">Insulin</option>
+    <option value="GLP-1 receptor agonist">GLP-1 Receptor Agonist</option>
+    <option value="insulin inhaled">Insulin Inhaled</option>
+    <option value="Combos">Combos</option>
+  </select>
+</div>
+
+<br><br>
+
+<h4 style="color: black">Form</h4>
+<div class="styled-select blue semi-square" style="width:200px;">
+    <select required [(ngModel)]="type">
+      <option value="void" selected>Select a Form</option>
+      <option value="Injectable">Injectable</option>
+      <option value="Inhalable">Inhalable</option>
+      <option value="Oral">Oral</option>
+    </select>
+</div>
+
+<br><br>
+
+<h4 style="color: black">Action</h4>
+<div class="styled-select blue semi-square" style="width:200px;">
+  <select required [(ngModel)]="act">
+    <option value="void" selected>Select an Action</option>
+    <option value="Insulin Replacement">Insulin Replacement</option>
+    <option value="Weight Reduction">Weight Reduction</option>
+    <option value="Insulin Production">Insulin Production (Pancreas)</option>
+    <option value="Appetite Suppression">Appetite Suppression (CNS)</option>
+    <option value="Glucose Release">Glucose Release (Liver)</option>
+    <option value="Glucose Uptake">Glucose Uptake (Fat, Muscle)</option>
+    <option value="Glucose Absorption">Glucose Absorption (Intestine)</option>
+    <option value="Glucose Excretion">Glucose Excretion (Kidney)</option>
+    <option value="Glucose Transit">Glucose Transit (Stomach)</option>
+  </select>
+</div>
+  <br><br><br>
+
+  <div *ngFor="let drug of meds2">
+    <ul>
+      <li *ngIf='(drug.price < this.price || this.price == undefined || this.price == "void") && (drug.Class == this.cls || this.cls == undefined || this.cls == "void") && (this.type == "Oral" || this.type == undefined || this.type == "void") && (drug.Class == "alpha-glucosidase inhibitor" || drug.Class == "biguanide" || drug.Class == "bile acid sequestrant" || drug.Class == "dopamine agonist" || drug.Class == "DPP-4 inhibitor" || drug.Class == "meglitinide" || drug.Class == "sulfonylurea" || drug.Class == "SGLT-2 Inhibitors" || drug.Class == "thiazolidinedione") && (this.act == undefined || this.act == "void")'>
+        <button class="Long-Button1 {{drug.Class}}" routerLink="/classes/{{drug.Class}}/{{drug.Brand}}" routerLinkActive="active">
+          {{ drug.Brand }}
+        </button>
+
+      </li>      
+    </ul>
+  </div> 
+<!--
+  <div>
+    <ul>
+      <li *ngIf="test != NULL">
+        <button class="Long-Button1" routerLink="/classes" routerLinkActive="active">
+          {{test.Brand}}
+        </button>
+      </li>            
+    </ul>
+  </div>
+
+  <div>
+    <ul>
+      <li *ngIf="test2 != NULL">
+        <button class="Long-Button1" routerLink="/classes" routerLinkActive="active">
+          {{test2.FirstN}}
+          </button>
+        </li>
+      </ul>
+    </div>-->
+<!--
+      <li *ngIf='(drug.Class == cls || cls == NULL) && (drug.price < this.price || this.price == undefined || this.price == "void") && (drug.Class == this.cls || this.cls == undefined || this.cls == "void") && (drug.Class == "alpha-glucosidase inhibitor" || "biguanide" || "bile acid equestrant" || "dopamine agonist" || "DPP-4 inhibitor" || "meglitinide" || "sulfonylurea" || "SGLT-2 Inhibitors" || "thiazolidinedione")'>
+        <button class="Long-Button1 {{drug.Class}}" routerLink="/classes/{{drug.Class}}/{{drug.Brand}}" routerLinkActive="active">
+          {{ drug.Brand }}
+
+      </li>
+      <li *ngIf='(drug.price < this.price || this.price == undefined || this.price == "void") && (drug.Class == this.cls || this.cls == undefined || this.cls == "void") && (this.type == "Injectable" || this.type == undefined || this.type == "void") && (drug.Class == "amylin analog" || drug.Class == "insulin" || drug.Class == "GLP-1 receptor agonist") && (drug.Generic != "insulin inhaled") && (this.act == undefined || this.act == "void")'>
+        <button class="{{drug.Class}}" routerLink="/classes/{{drug.Class}}/{{drug.Brand}}" routerLinkActive="active">
+          {{drug.Brand}}
+        </button>
+      </li>
+      <li *ngIf='(drug.price < this.price || this.price == undefined || this.price == "void") && (drug.Generic == this.cls || this.cls == undefined || this.cls == "void") && (this.type == "Inhalable" || this.type == undefined || this.type == "void") && (drug.Class == "insulin" && drug.Generic == "insulin inhaled") && (this.act == undefined || this.act == "void")'>
+        <button id="button" class="button0" style="margin-left: 5vw; margin-right: 5vw; margin-bottom: .5vw" routerLink="/classes/{{drug.Class}}/{{drug.Brand}}" routerLinkActive="active">
+          <span>{{drug.Brand}}</span>
+
+        </button>
+      </li>
+      <li *ngIf='(drug.price < this.price || this.price == undefined || this.price == "void") && (drug.Class == this.cls || this.cls == undefined || this.cls == "void") && (this.type == "Injectable" || this.type == undefined || this.type == "void") && (this.act == "Insulin Replacement") && (drug.Class == "insulin" || drug.Class == "amylin analog") && (drug.Generic != "insulin inhaled")'>
+        <button class="{{drug.Class}}" routerLink="/classes/{{drug.Class}}/{{drug.Brand}}" routerLinkActive="active">
+          {{drug.Brand}}
+        </button>
+      </li>
+      <li *ngIf='(drug.price < this.price || this.price == undefined || this.price == "void") && (drug.Generic == this.cls || this.cls == undefined || this.cls == "void") && (this.type == "Inhalable" || this.type == undefined || this.type == "void") && (this.act == "Insulin Replacement") && (drug.Generic == "insulin inhaled")'>
+        <button id="button" class="button0" style="margin-left: 5vw; margin-right: 5vw; margin-bottom: .5vw" routerLink="/classes/{{drug.Class}}/{{drug.Brand}}" routerLinkActive="active">
+          <span>{{drug.Brand}}</span>
+        </button>
+      </li>
+      <li *ngIf='(drug.price < this.price || this.price == undefined || this.price == "void") && (drug.Class == this.cls || this.cls == undefined || this.cls == "void") && (this.type == "Injectable" || this.type == undefined || this.type == "void") && (this.act == "Weight Reduction") && (drug.Class == "GLP-1 receptor agonist")'>
+        <button class="{{drug.Class}}" routerLink="/classes/{{drug.Class}}/{{drug.Brand}}" routerLinkActive="active">
+          {{drug.Brand}}
+        </button>
+      </li>
+      <li *ngIf='(drug.price < this.price || this.price == undefined || this.price == "void") && (drug.Class == this.cls || this.cls == undefined || this.cls == "void") && (this.type == "Oral" || this.type == undefined || this.type == "void") && (this.act == "Insulin Production") && (drug.Class == "sulfonylurea" || drug.Class == "meglitinide" || drug.Class == "DPP-4 inhibitor")'>
+        <button class=" Long-Button1 {{drug.Class}}" routerLink="/classes/{{drug.Class}}/{{drug.Brand}}" routerLinkActive="active">
+          {{drug.Brand}}
+        </button>
+      </li>
+      <li *ngIf='(drug.price < this.price || this.price == undefined || this.price == "void") && (drug.Class == this.cls || this.cls == undefined || this.cls == "void") && (this.type == "Injectable" || this.type == undefined || this.type == "void") && (this.act == "Insulin Production") && (drug.Class == "GLP-1 receptor agonist")'>
+        <button class="{{drug.Class}}" routerLink="/classes/{{drug.Class}}/{{drug.Brand}}" routerLinkActive="active">
+          {{drug.Brand}}
+        </button>
+      </li>
+      <li *ngIf='(drug.price < this.price || this.price == undefined || this.price == "void") && (drug.Class == this.cls || this.cls == undefined || this.cls == "void") && (this.type == "Oral" || this.type == undefined || this.type == "void") && (this.act == "Appetite Suppression") && (drug.Class == "DPP-4 inhibitor")'>
+        <button class=" Long-Button1 {{drug.Class}}" routerLink="/classes/{{drug.Class}}/{{drug.Brand}}" routerLinkActive="active">
+          {{drug.Brand}}
+        </button>
+      </li>
+      <li *ngIf='(drug.price < this.price || this.price == undefined || this.price == "void") && (drug.Class == this.cls || this.cls == undefined || this.cls == "void") && (this.type == "Injectable" || this.type == undefined || this.type == "void") && (this.act == "Appetite Suppression") && (drug.Class == "GLP-1 receptor agonist")'>
+        <button class="{{drug.Class}}" routerLink="/classes/{{drug.Class}}/{{drug.Brand}}" routerLinkActive="active">
+          {{drug.Brand}}
+        </button>
+      </li>
+      <li *ngIf='(drug.price < this.price || this.price == undefined || this.price == "void") && (drug.Class == this.cls || this.cls == undefined || this.cls == "void") && (this.type == "Oral" || this.type == undefined || this.type == "void") && (this.act == "Glucose Release") && (drug.Class == "biguanide" || drug.Class == "dopamine agonist")'>
+        <button class=" Long-Button1 {{drug.Class}}" routerLink="/classes/{{drug.Class}}/{{drug.Brand}}" routerLinkActive="active">
+          {{drug.Brand}}
+        </button>
+      </li>
+      <li *ngIf='(drug.price < this.price || this.price == undefined || this.price == "void") && (drug.Class == this.cls || this.cls == undefined || this.cls == "void") && (this.type == "Oral" || this.type == undefined || this.type == "void") && (this.act == "Glucose Uptake") && (drug.Class == "thiazolidinedione")'>
+        <button class=" Long-Button1 {{drug.Class}}" routerLink="/classes/{{drug.Class}}/{{drug.Brand}}" routerLinkActive="active">
+          {{drug.Brand}}
+        </button>
+      </li>
+      <li *ngIf='(drug.price < this.price || this.price == undefined || this.price == "void") && (drug.Class == this.cls || this.cls == undefined || this.cls == "void") && (this.type == "Oral" || this.type == undefined || this.type == "void") && (this.act == "Glucose Absorption") && (drug.Class == "alpha-glucosidase inhibitor" || drug.Class == "bile acid sequestrant")'>
+        <button class=" Long-Button1 {{drug.Class}}" routerLink="/classes/{{drug.Class}}/{{drug.Brand}}" routerLinkActive="active">
+          {{drug.Brand}}
+        </button>
+      </li>
+      <li *ngIf='(drug.price < this.price || this.price == undefined || this.price == "void") && (drug.Class == this.cls || this.cls == undefined || this.cls == "void") && (this.type == "Oral" || this.type == undefined || this.type == "void") && (this.act == "Glucose Excretion") && (drug.Class == "SGLT-2 Inhibitors")'>
+        <button class=" Long-Button1 {{drug.Class}}" routerLink="/classes/{{drug.Class}}/{{drug.Brand}}" routerLinkActive="active">
+          {{drug.Brand}}
+        </button>
+      </li>
+      <li *ngIf='(drug.price < this.price || this.price == undefined || this.price == "void") && (drug.Class == this.cls || this.cls == undefined || this.cls == "void") && (this.type == "Injectable" || this.type == undefined || this.type == "void") && (this.act == "Glucose Transit") && (drug.Class == "amylin analog")'>
+        <button class="{{drug.Class}}" routerLink="/classes/{{drug.Class}}/{{drug.Brand}}" routerLinkActive="active">
+          {{drug.Brand}}
+        </button>
+      </li>
+    </ul>
+  </div>
+
+<!--<ul *ngFor="let com of combo">
+      <li *ngIf='drugs == "Combos"'>
+        <button id="Long-Button1 button10" routerLink="/classes/{{drugs}}/{{com.ComboName}}">
+          {{ com.ComboName }}
+        </button>
+      </li>
+    </ul>-->
+
+

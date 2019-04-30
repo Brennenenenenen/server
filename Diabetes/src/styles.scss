@@ -1,0 +1,455 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/pink-bluegrey.css";
+body {
+  background: #f6f7f8;
+  margin: 0;
+  padding: 0;
+}
+
+#Square-Button {
+  overflow-wrap: break-word;
+  text-align: center;
+  width: 20vw;
+  height: 20vw;
+  margin: 0;
+  border: solid;
+  position: absolute;
+  font-size: 20px;
+  border-radius: 8px;
+  color: black;
+  border-color: black;
+  background: white;
+}
+
+#Square-Button-Injectable {
+  overflow-wrap: break-word;
+  text-align: center;
+  width: 20vw;
+  height: 20vw;
+  transform: skew(20deg);
+  margin: 0;
+  border: solid;
+  position: absolute;
+  font-size: 20px;
+  border-radius: 8px;
+  color: black;
+  border-color: black;
+  background: white;
+}
+
+#Square-Button-Oral {
+  overflow-wrap: break-word;
+  text-align: center;
+  width: 25vw;
+  height: 20vw;
+  margin: 0;
+  border: solid;
+  position: absolute;
+  font-size: 20px;
+  border-radius: 50%;
+  color: black;
+  border-color: black;
+  background: white;
+}
+
+#Background{
+  width: 92vw;
+  height: 36vw;
+  color: white;
+  border: none;
+  background: #191b1d;
+  overflow-y: scroll;
+}
+
+.Long-Button {
+  text-align: center;
+  text-size-adjust: inherit;
+  width: 18vw;
+  height: 10vw;
+  background-color: #007bff; /* Green */
+  border-radius: 8px;
+  color: white;
+  display: inline-block;
+  font-size: 2vw;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.Long-Button1 {
+  text-align: center;
+  text-size-adjust: inherit;
+  float: left;
+  overflow: hidden;
+  width: 18vw;
+  height: 10vw;
+  background-color: #007bff; /* Green */
+  border-radius: 50%;
+  display: inline-block;
+  font-size: 2vw;
+  //margin: 4px 2px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button0 {
+  background-color: #f98b8e;
+  color: white;
+  font-weight: bold
+}
+
+.button0:hover {
+  background-color: white;
+  color: red;
+}
+
+.button1 {
+  background-color: white;
+  color: black;
+}
+
+.button1:hover {
+  background-color: black;
+  color: white;
+}
+
+.button2 {
+  background-color: #815858;
+  color: white;
+  font-weight: bold
+}
+
+.button2:hover {
+  background-color: white;
+  color: #ec407a;
+}
+
+.button3 {
+  background-color: #cb93ab;
+  color: white;
+  font-weight: bold
+}
+
+.button3:hover {
+  background-color: white;
+  color: #9c27b0;
+}
+
+.button4 {
+  background-color: #c4c299;
+  color: white;
+  font-weight: bold
+}
+
+.button4:hover {
+  background-color: white;
+  color: #4527a0;
+}
+
+.button5 {
+  background-color: #7fd2a1;
+  color: white;
+  font-weight: bold
+}
+
+.button5:hover {
+  background-color: white;
+  color: #304ffe;
+}
+
+.button6 {
+  background-color: #6b98ad;
+  color: white;
+  font-weight: bold
+}
+
+.button6:hover {
+  background-color: white;
+  color: #2196f3;
+}
+
+.button7 {
+  background-color: #f9a586;
+  color: white;
+  font-weight: bold
+}
+
+.button7:hover {
+  background-color: white;
+  color: #80d8ff;
+}
+
+.button8 {
+  background-color: #74d774;
+  color: white;
+  font-weight: bold
+}
+
+.button8:hover {
+  background-color: white;
+  color:green;
+}
+
+.button9 {
+  background-color: #ff6156;
+  color: white;
+  font-weight: bold
+}
+
+.button9:hover {
+  background-color: white;
+  color:  #c6ff00;
+}
+
+.button10 {
+  border: solid;
+  border-color: black;
+  background-color: #00f8f8;
+  color: black;
+  font-weight: bold
+}
+
+.button10:hover {
+  background-color: white;
+  color: #ffea00;
+}
+
+.ininput input {
+  background: black;
+  color: white;
+  position:left;
+  margin-left: 8px;
+  font-size: 15px;
+  border-radius: 50%;
+  margin-top: .5vw;
+
+}
+
+
+#Square-div {
+  margin-top: 5vw;
+  margin-left: 25vw;
+}
+
+#Square-ul {
+  margin: 0;
+  overflow: hidden;
+  list-style-type: none;
+}
+
+#Square-li {
+  float: left;
+  margin-right: 22vw;
+  margin-bottom: 22vw;
+}
+
+#Square-li button {
+    display: inline;
+}
+
+.blue-snackbar {
+  background: #007bff;
+}
+
+.alpha-glucosidase.inhibitor {
+  background-color: #f98b8e;
+  color: white;
+  font-weight: bold;
+  margin: 1.5vw;
+}
+.biguanide {
+  background-color: #815858;
+  color: white;
+  font-weight: bold;
+  margin: 1.5vw;
+}
+.bile.acid.sequestrant {
+  background-color: #cb93ab;
+  color: white;
+  font-weight: bold;
+  margin: 1.5vw;
+}
+.dopamine.agonist {
+  background-color: #c4c299;
+  color: white;
+  font-weight: bold;
+  margin: 1.5vw;
+}
+.DPP-4.inhibitor {
+  background-color: #7fd2a1;
+  color: white;
+  font-weight: bold;
+  margin: 1.5vw;
+}
+.meglitinide {
+  background-color: #6b98ad;
+  color: white;
+  font-weight: bold;
+  margin: 1.5vw;
+}
+.sulfonylurea {
+  background-color: #74d774;
+  color: white;
+  font-weight: bold;
+  margin: 1.5vw;
+}
+.SGLT-2.Inhibitors {
+  background-color: #f9a586;
+  color: white;
+  font-weight: bold;
+  margin: 1.5vw;
+}
+.thiazolidinedione {
+  background-color: #ff6156;
+  color: white;
+  font-weight: bold;
+  margin: 1.5vw;
+}
+
+.trapezium {
+  // border-bottom: 10vw solid #f98b8e;
+  border-top: 0vw;
+  border-left: 4vw solid #f6f7f8;
+  border-right: 4vw solid #f6f7f8;
+  height: 0;
+  width: 18vw;
+  color: white;
+  text-align: center;
+  text-size-adjust: inherit;
+  display: inline-block;
+  overflow-wrap: break-word;
+  font-size: 2vw;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.amylin.analog {
+  border-top: 0vw;
+  border-bottom: 10vw solid #f98b8e;
+  border-left: 4vw solid #f6f7f8;
+  border-right: 4vw solid #f6f7f8;
+  margin: 1.5vw;
+  height: 0;
+  width: 18vw;
+  color: white;
+  text-align: center;
+  text-size-adjust: inherit;
+  display: inline-block;
+  overflow-wrap: break-word;
+  font-size: 2vw;
+  font-weight: bold;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.insulin {
+  border-top: 0vw;
+  border-bottom: 10vw solid #815858;
+  border-left: 4vw solid #f6f7f8;
+  border-right: 4vw solid #f6f7f8;
+  margin: 1.5vw;
+  height: 0;
+  width: 18vw;
+  color: white;
+  text-align: center;
+  text-size-adjust: inherit;
+  display: inline-block;
+  overflow-wrap: break-word;
+  font-size: 2vw;
+  font-weight: bold;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.GLP-1.receptor.agonist {
+  border-top: 0vw;
+  border-bottom: 10vw solid #cb93ab;
+  border-left: 4vw solid #f6f7f8;
+  border-right: 4vw solid #f6f7f8;
+  margin: 1.5vw;
+  height: 0;
+  width: 18vw;
+  color: white;
+  text-align: center;
+  text-size-adjust: inherit;
+  display: inline-block;
+  overflow-wrap: break-word;
+  font-size: 2vw;
+  font-weight: bold;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.Combos {
+  border-top: 0vw;
+  border-bottom: 10vw solid #018f8d;
+  border-left: 4vw solid #f6f7f8;
+  border-right: 4vw solid #f6f7f8;
+  height: 0;
+  width: 20vw;
+  color: white;
+  text-align: center;
+  text-size-adjust: inherit;
+  display: inline-block;
+  overflow-wrap: break-word;
+  font-size: 2vw;
+  font-weight: bold;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+$cloud_size: 10vw;
+
+  #button {
+    position: relative;
+    width: $cloud_size;
+    height: $cloud_size;
+    border-radius: 50%;
+    transition: background-color 100ms linear, height 70ms ease-in, width 70ms ease-in;
+    cursor: pointer;
+
+    &::before,
+    &::after {
+      content: "";
+      display: block;
+      width: $cloud_size - 1vw;
+      height: $cloud_size - 1vw;
+      position: absolute;
+      top: $cloud_size / 8;
+      background-color: inherit;
+      border-radius: inherit;
+    }
+
+    &::before {
+      left: -100%;
+      margin-left: calc( ( #{$cloud_size} / 2) );
+    }
+
+    &::after {
+      right: -100%;
+      margin-right: calc( ( #{$cloud_size} / 2) );
+    }
+
+    &:active {
+      background-color: #ECE9E6;
+    }
+
+    span {
+      position: absolute;
+      z-index: 3;
+      width: 200%;
+      left: -50%;
+      text-align: center;
+      top: 45%;
+      margin-top: -0.5em;
+      font-size: $cloud_size / 5;
+      overflow-wrap: break-word;
+    }
+  }

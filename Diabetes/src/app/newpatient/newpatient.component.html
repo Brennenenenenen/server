@@ -1,0 +1,45 @@
+<h2 style="color: black; margin-left: 28.5vw; margin-top: 2.5vw;">New Patient</h2>
+
+<form [formGroup]="createForm" class ="create-form">
+  <label style="color: black; margin-left: 28.5vw;">First Name</label>
+  <input style="width: 50%; margin-left: 28.5vw;" type="text" formControlName="fname" #fname class="form-control" />
+
+  <label style="color: black; margin-left: 28.5vw;">Last name</label>
+  <input style="width: 50%; margin-left: 28.5vw;" type="text" formControlName="lname" #lname class="form-control" />
+
+  <label style="color: black; margin-left: 28.5vw;">Middle Name</label>
+  <input style="width: 50%; margin-left: 28.5vw;" type="text" formControlName="mname" #mname class="form-control" />
+
+  <label style="color: black; margin-left: 28.5vw;">Phone number</label>
+  <input style="width: 50%; margin-left: 28.5vw;" type="number" formControlName="phone" #phone class="form-control" />
+
+  <label style="color: black; margin-left: 28.5vw;">Weight (pounds)</label>
+  <input style="width: 50%; margin-left: 28.5vw;" type="number" formControlName="weight" #weight class="form-control" oninput="validity.valid||(value='');"  min="0" step="0.01"/>
+
+  <label style="color: black; margin-left: 28.5vw;">Height (inches)</label>
+  <input style="width: 50%; margin-left: 28.5vw;" type="number" formControlName="height" #height class="form-control" />
+
+  <label style="color: black; margin-left: 28.5vw;">Date of Birth</label>
+  <input style="width: 50%; margin-left: 28.5vw;" type="date" formControlName="dob" #dob class="form-control" />
+
+  <label style="color: black; margin-left: 28.5vw;">Patient ID Number</label>
+  <input style="width: 50%; margin-left: 28.5vw;" type="number" formControlName="ssn" #ssn class="form-control" />
+  <br>
+
+  <label style="color: black; margin-left: 28.5vw;">Gender</label>
+  <br>
+  <select matNativeControl formControlName="gender" #gender required   style="color: black; margin-left: 28.5vw;">
+      <option value="Male">Male</option>
+      <option value="Female">Female</option>
+      <option value="Other">Other</option>
+    </select> 
+  <br>
+  <br>
+
+  <button style="margin-left: 28.5vw;" type="submit" class="btn btn-primary" (click)="addpatient(fname.value, lname.value, mname.value, dob.value, ssn.value, phone.value, weight.value, height.value, gender.value)" [disabled]="createForm.pristine || createForm.invalid">Save</button>
+  <button style="margin-left: 2vw;" routerLink="/patients" routerLinkActive="active" class="btn btn-primary">Cancel</button>
+
+  
+</form>
+
+

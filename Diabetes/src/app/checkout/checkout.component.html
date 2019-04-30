@@ -1,0 +1,47 @@
+<h3>
+  Patient: {{ pname }}
+</h3>
+
+
+
+
+    <mat-card> 
+      <table mat-table [dataSource]="cart">
+        <ng-container matColumnDef="Drugs">
+          <th mat-header-cell *matHeaderCellDef>Drugs</th>
+          <td mat-cell *matCellDef="let element"> {{element.Drugs}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="Class">
+          <th mat-header-cell *matHeaderCellDef>Class</th>
+          <td mat-cell *matCellDef="let element"> {{element.Class}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="Dosage">
+          <th mat-header-cell *matHeaderCellDef class="mat-column-right">Dosage</th>
+          <td mat-cell *matCellDef="let element" class="mat-column-right"> {{element.dose}} </td>
+        </ng-container>
+        
+        <ng-container matColumnDef="Quantity">
+            <th mat-header-cell *matHeaderCellDef class="mat-column-right">Quantity</th>
+            <td mat-cell *matCellDef="let element" class="mat-column-right"> {{element.qty}} </td>
+          </ng-container> 
+  
+         <ng-container matColumnDef="Price">
+          <th mat-header-cell *matHeaderCellDef class="mat-column-right">Price</th>
+          <td mat-cell *matCellDef="let element" class="mat-column-right"> {{element.Price | currency}} </td>
+        </ng-container>
+  
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+    </mat-card>
+
+     <div>
+        <h3 style = "color:black;"id="subtotal">Total: {{ sum | currency }}</h3>
+    </div> 
+
+    <div id="container">
+        <button  id="canclebtn" class="btn btn-danger" onclick="history.go(-1)">Cancel</button>
+        <button  id="donebtn" class="btn btn-default" (click)="addHistory()">Done</button>
+    </div>

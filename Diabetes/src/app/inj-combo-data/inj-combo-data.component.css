@@ -1,0 +1,107 @@
+div {
+    margin-top: 2vw;
+    margin-left: 2.5vw;
+    margin-right: 2.5vw;
+  }
+  
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    background-color: #222222;
+    color: white;
+    text-align: left;
+  }
+  
+  #title {
+    font-size: 3vw;
+    text-align: center;
+    color: white;
+    background-color: #98999b;
+    display: block;
+    overflow: hidden;
+    list-style-type: none;
+  }
+  
+  li {
+    margin-bottom: 1vw;
+  }
+  
+  li {
+    margin-bottom: 1vw;
+    font-size: 2vw;
+  }
+  
+  button{
+    background:red;
+    color: white;
+    position: center;
+    font-size: 15px;
+    width: 100px;
+    height: 100px;
+    border: none;
+  }
+
+  #cartbtn{
+    border-radius: 25px;
+    margin-left: 85%;
+    text-decoration: none;
+    background-color: #EEEEEE;
+    color: black;
+    padding: 4px 8px 4px 8px;
+  }
+
+  #cartbtn:hover{
+    background-color: lightgray;
+    color: black;
+  }
+  
+  #cartbtn:active{
+    background-color: darkgray;
+    color: black;
+  }
+  
+  .mat-column-right {
+    text-align: center;
+  }
+  
+  .mat-column-sub {
+    text-align: right;
+  }
+  
+  .lightgrey { 
+    background-color:lightgray; 
+  }
+  
+  .dark {
+    background-color: whitesmoke;
+  }
+  
+  .styled-select {
+    background: url(http://i62.tinypic.com/15xvbd5.png) no-repeat 96% 0;
+    height: 29px;
+    overflow: hidden;
+    width: 240px;
+  }
+  
+  .styled-select select {
+    background: transparent;
+    border: none;
+    font-size: 16px;
+    height: 29px;
+    padding: 6px;
+    width: 268px;
+  }
+  
+  .semi-square {
+    border-radius: 5px;
+  }
+  
+  .blue { 
+   background-color: #ddd;
+  }
+  
+  .blue select { 
+   color: black; 
+  }
+  

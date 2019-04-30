@@ -1,0 +1,30 @@
+<a class="ininput">
+  <input type="button" class="btn btn-default" value="<" onclick="history.go(-1)">
+</a>
+
+<div>
+  <span *ngFor="let drug of meds2">
+    <ul>
+      <li *ngIf='drug.Class == drugs && drug.Generic != "generic"'>
+        <button class="Long-Button1 {{drug.Class}}" routerLink="/classes/{{drugs}}/{{drug.Brand}}" routerLinkActive="active">
+          {{ drug.Brand }}
+        </button>
+      </li>
+    </ul>
+  </span>
+</div>
+
+<div>
+  <span *ngFor="let drug of meds2">
+    <ul>
+      <li *ngIf='drug.Class == drugs && drug.Generic == "generic"'>
+        <button class="Long-Button1 {{drug.Class}}" routerLink="/classes/{{drugs}}/{{drug.Brand}}" routerLinkActive="active">
+          {{ drug.Brand }}
+        </button>
+      </li>
+    </ul>
+  </span>
+</div>
+
+
+

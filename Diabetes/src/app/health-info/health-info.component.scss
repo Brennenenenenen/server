@@ -1,0 +1,79 @@
+ul {
+  list-style-type: none;
+  margin: 0;
+}
+
+li {
+  float: left;
+  overflow: hidden;
+}
+
+div {
+  margin-left: 4%;
+}
+
+h4{
+  margin-left: 4%;
+}
+
+.header {
+margin-left: 40vw;
+margin-right: auto;
+display: inline; 
+font-size: 4vw;
+}
+
+.clrbtn {
+  float: left; 
+  margin-left: 2%; 
+  font-size: 1.4vw;
+}
+
+.searchbtn {
+  float: right; 
+  margin-right: 2vw; 
+  font-size: 1.4vw;
+}
+
+.searchbar {
+  float: right;
+  border-radius: 10px;
+  margin-right: 2%; 
+  width: 15vw; 
+  height: 3vw;
+  font-size: 1.4vw;
+}
+
+.searchbar .searchbtn {
+  display: inline;
+}
+
+
+
+.styled-select {
+   background: url(http://i62.tinypic.com/15xvbd5.png) no-repeat 96% 0;
+   height: 29px;
+   overflow: hidden;
+   width: 240px;
+}
+
+.styled-select select {
+   background: transparent;
+   border: none;
+   font-size: 14px;
+   height: 29px;
+   padding: 5px;
+   width: 268px;
+}
+
+.semi-square {
+   border-radius: 5px;
+}
+
+.blue { 
+  background-color: #ddd;
+}
+
+.blue select { 
+  color: black; 
+}

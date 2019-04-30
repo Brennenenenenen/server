@@ -1,0 +1,27 @@
+<a class="ininput">
+  <input type="button" class="btn btn-default" value="<" onclick="history.go(-1)">
+  </a>
+  <div>
+    <strong id="title">{{drugs}}</strong>
+    <span>
+      <ul *ngFor="let onPageInj of meds">
+        <li *ngIf='onPageInj.Brand == drugs'>
+          Generics: {{onPageInj.Generic}} <br />
+          Class: {{onPageInj.Class}} <br />
+          Price: {{array2[dqp] }} <br />        
+          <!--dqp comes from the drop down ngModel name-->    
+           Dosage:<span class="styled-select blue semi-square" style="width:200px; margin-left: 10px">
+              <select matNativeControl required [(ngModel)]="dqp">
+              <option value="void">Select a Dosage</option>
+             <option value="{{array.indexOf(a)}}" *ngFor="let a of array">{{a}}</option>  <!-- 0, 1 are the elements of the array -->
+            </select>
+          </span><br/> 
+          Quantity: {{array1[dqp]}} <br />
+          Link:<a href="{{onPageInj.link}}" target="_blank"> {{onPageInj.link}} </a> <br />
+          <a id="cartbtn" (click)="addtocart(onPageInj.Brand, array2[dqp], onPageInj.Class, array1[dqp], array[dqp])">Add To Cart</a>
+        </li>
+      </ul>
+    </span>
+  </div>
+  
+  

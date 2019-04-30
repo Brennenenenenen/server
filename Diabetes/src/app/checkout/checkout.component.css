@@ -1,0 +1,26 @@
+table {
+    width: 100%;
+  }
+  
+  .mat-column-right {
+    text-align: center;
+  }
+  
+  .mat-column-sub {
+    text-align: right;
+  }
+
+  #donebtn {
+    background:#007bff; 
+    color:white;
+    margin: 2px;
+  }
+
+  #canclebtn {
+    color:white;
+  }
+
+  #container {
+    display: inline-block;
+    float: right;
+  }
