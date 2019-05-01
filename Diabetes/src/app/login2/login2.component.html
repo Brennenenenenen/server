@@ -1,0 +1,40 @@
+<h1>Login</h1>
+<mat-card>
+ <!-- <mat-spinner *ngIf="isLoading"></mat-spinner> -->
+  <form (submit)="onLogin(loginForm)" #loginForm="ngForm" *ngIf="!isLoading">
+    <mat-form-field >
+      <input matInput name="email" ngModel type="email" placeholder ="E-Mail" #emailInput="ngModel" required email>
+      <mat-error *ngIf="emailInput.invalid">Please endter a valid email.</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <input type="password" name ="password" ngModel matInput placeholder="Password" #passwordInput="ngModel" required>
+      <mat-error *ngIf="passwordInput.invalid">Please enter a valid password</mat-error>
+    </mat-form-field>
+    <br>
+  <button mat-raised-button color="accent" type="submit">Login</button>
+  <button mat-raised-button color="accent" routerLink="/register2" outerLinkActive="active" style="margin: 4px">Register</button>
+  </form>
+</mat-card>
+
+
+<!--
+<h2 style="color: black; margin-left: 28.5vw; margin-top: 2.5vw;">Login</h2>
+<form (submit)="onLogin(loginForm)" #loginForm="ngForm" *ngIf="!isLoading">
+    <div class="form-group">
+        <label style="color: black; margin-left: 28.5vw;" >Email</label>
+        <input  style="width: 50%; margin-left: 28.5vw;"  name="email" ngModel type="email" placeholder="E-Mail" #emailInput="ngModel" required email/>
+        <!--<div *ngIf="submitted && f.username.errors" class="invalid-feedback">-->
+           <!-- <div *ngIf="f.username.errors.required" style="margin-left: 28.5vw;">Username is required</div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label style="color: black; margin-left: 28.5vw;">Password</label>
+        <input style="width: 50%; margin-left: 28.5vw;" type="password" name ="password" ngModel placeholder="Password" #passwordInput="ngModel" required/>
+        <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+            <div *ngIf="f.password.errors.required" style="margin-left: 28.5vw;">Password is required</div>
+        </div>
+        
+    </div>
+</form>
+-->
+

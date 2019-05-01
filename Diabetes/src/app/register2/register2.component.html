@@ -1,0 +1,19 @@
+<h1>Register</h1>
+<mat-card>
+<!--<mat-spinner *ngIf="isLoading"></mat-spinner>-->
+   <form (submit)="onRegister(registerForm)" #registerForm="ngForm" *ngIf="!isLoading">
+     <mat-form-field>
+       <input matInput name="email" ngModel type="email" placeholder ="E-Mail" #emailInput="ngModel" required email>
+       <mat-error *ngIf="emailInput.invalid">Please endter a valid email.</mat-error>
+     </mat-form-field>
+     <mat-form-field>
+       <input type="password" name ="password" ngModel matInput placeholder="Password" #passwordInput="ngModel" required>
+       <mat-error *ngIf="passwordInput && passwordInput.invalid">Please enter a valid password</mat-error>
+     </mat-form-field>
+     <mat-form-field>
+        <input type="password" name ="confimPassword" ngModel matInput placeholder="Password" #confimPassword="ngModel" required pattern="{{ passwordInput.value }}">
+       <!-- <mat-error *ngIf="confimPassword.touched && confimPassword.errors.pattern">Please enter a matching password</mat-error>-->
+      </mat-form-field>
+   <button mat-raised-button color="accent" type="submit">Register</button>
+   </form>
+  </mat-card>

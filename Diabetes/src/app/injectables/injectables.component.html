@@ -1,0 +1,29 @@
+<a class="ininput">
+  <input type="button" style="float:left" class="btn btn-default" value="<" onclick="history.go(-1)">
+</a>
+<br /><br />
+
+  <span *ngFor="let onPageInj of meds">
+    <ul>
+      <li *ngIf='onPageInj.Class == drugs && onPageInj.Class == "amylin analog"'>
+        <button class="trapezium button0" style="border-bottom: 10vw solid #f98b8e" routerLink="/injectableClasses/{{ onPageInj.Class }}/{{ onPageInj.Brand }}" routerLinkActive="active">
+          {{ onPageInj.Brand }}
+        </button>
+      </li>
+      <li *ngIf='onPageInj.Class == drugs && onPageInj.Class == "insulin" && onPageInj.Generic != "insulin inhaled"'>
+        <button class="trapezium button2" style="border-bottom: 10vw solid #815858" routerLink="/injectableClasses/{{ onPageInj.Class }}/{{ onPageInj.Brand }}" routerLinkActive="active">
+          {{ onPageInj.Brand }}
+        </button>
+      </li>
+      <li *ngIf='onPageInj.Class == drugs && onPageInj.Class == "GLP-1 receptor agonist"'>
+        <button class="trapezium button3" style="border-bottom: 10vw solid #cb93ab" routerLink="/injectableClasses/{{ onPageInj.Class }}/{{ onPageInj.Brand }}" routerLinkActive="active">
+          {{ onPageInj.Brand }}
+        </button>
+      </li>
+      <li *ngIf='onPageInj.Class == drugs && onPageInj.Class == "Combos"'>
+        <button class="trapezium button10" style="border-bottom: 10vw solid #018f8d" routerLink="/injectableClasses/{{ onPageInj.Class }}/{{ onPageInj.Brand }}" routerLinkActive="active">
+          {{ onPageInj.Brand  }}
+        </button>
+      </li>
+    </ul>
+  </span>
